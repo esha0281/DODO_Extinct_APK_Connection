@@ -847,7 +847,10 @@ fun registrationfieldInput() {
 @Composable
 fun registrationButton(onClick: () -> Unit) {
     ElevatedButton(onClick = { onClick() }) {
-        Text("Elevated")
+        Text(
+            text = "Register",
+            fontFamily = glacialIndifference
+        )
     }
 }
 
