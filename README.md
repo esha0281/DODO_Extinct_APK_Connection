@@ -82,8 +82,15 @@ Pull Requests: How to submit a pull request.
 Issue Reporting: How to report issues or bugs.
 License
 
+Insights and DEMO: 
+https://youtu.be/8mkn2xwIZjM
+
+
 License Information: Details about the project's license (e.g., MIT License).
 Contact
+
+Copyright to right of intellectual property CC - 
+Erik Shamsedeen (eshams28@outlook.com) & Aaron Nayki (naykiaaron@gmail.com)
 
 Project Maintainers: Contact information for the project maintainers.
 Support Channels: Information on how to get support or ask questions.
