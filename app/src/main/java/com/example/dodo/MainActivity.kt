@@ -384,7 +384,10 @@ class MainActivity3 : ComponentActivity() {
                         )
 
                         System.out.println(descriptionResult)
-                        ElevatedCardExample()
+
+                        Row() {
+                            ElevatedCardExample()
+                        }
 
                         BottomAppBarExample(this@MainActivity3, this@MainActivity3)
 
@@ -1065,15 +1068,15 @@ fun BottomAppBarExample(onClick: MainActivity3, content: Context) {
 fun ElevatedCardExample() {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(
-            defaultElevation = 6.dp
+            defaultElevation = 20.dp
         ),
         modifier = Modifier
-            .size(width = 240.dp, height = 100.dp)
+            .size(width = 600.dp, height = 400.dp)
     ) {
         Text(
             text = descriptionResult,
             modifier = Modifier
-                .padding(16.dp),
+                .padding(start = 10.dp),
             textAlign = TextAlign.Center,
         )
     }
@@ -1108,11 +1111,6 @@ fun registrationfieldInpuPreivew() {
     registrationfieldInput()
 }
 
-@Preview
-@Composable
-fun ElevatedCardExamplePreview() {
-    ElevatedCardExample()
-}
 
 
 
