@@ -379,10 +379,6 @@ class MainActivity3 : ComponentActivity() {
 
                         }
 
-                        Text(
-                            text = descriptionResult
-                        )
-
                         System.out.println(descriptionResult)
 
                         Row() {
