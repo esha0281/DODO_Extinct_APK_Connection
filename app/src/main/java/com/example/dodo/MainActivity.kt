@@ -1111,6 +1111,12 @@ fun registrationfieldInpuPreivew() {
     registrationfieldInput()
 }
 
+@Preview
+@Composable
+fun ElevatedCardExamplePreview () {
+    ElevatedCardExample()
+}
+
 
 
 
