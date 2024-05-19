@@ -234,7 +234,7 @@ class MyViewModel : ViewModel() {
 
             val inputContent = content {
                 image(bitmap)
-                text("What is the animal in the picture and the specific species name/recognition? (if possible)?")
+                text("What is the animal in the picture, specific species name/recognition (if possible), if the species or animals is endangered, and the current population of the species/animal?")
             }
 
             val response = generativeModel.generateContent(inputContent)
@@ -1070,10 +1070,11 @@ fun ElevatedCardExample() {
             .size(width = 600.dp, height = 400.dp)
     ) {
         Text(
-            text = descriptionResult,
+            text = descriptionResult + ("\n\n|Press the home button to refresh|"),
+            fontFamily = glacialIndifference,
             modifier = Modifier
                 .padding(start = 10.dp),
-            textAlign = TextAlign.Center,
+            textAlign = TextAlign.Left,
         )
     }
 }
