@@ -236,6 +236,7 @@ class MyViewModel : ViewModel() {
             }
 
             val response = generativeModel.generateContent(inputContent)
+            descriptionResult = response.text.toString()
             println(response.text)
         }
     }
@@ -727,6 +728,7 @@ public var birdLover = false
 public var plantsLover = false
 
 public var generalURI = ""
+public var descriptionResult = ""
 
 val apiKey = "AIzaSyABXDNumR5qVnSNYbKc5S7DQjKWOKgtS48"
 val generativeModel = GenerativeModel(
@@ -1045,7 +1047,7 @@ fun BottomAppBarExample(onClick: MainActivity3, content: Context) {
     ) { innerPadding ->
         Text(
             modifier = Modifier.padding(innerPadding),
-            text = "Example of a scaffold with a bottom app bar."
+            text = ""
         )
     }
 }
