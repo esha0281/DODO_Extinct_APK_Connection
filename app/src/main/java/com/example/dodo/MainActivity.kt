@@ -150,6 +150,8 @@ import androidx.camera.video.Quality
 import androidx.camera.video.QualitySelector
 import androidx.camera.video.VideoRecordEvent
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.painter.Painter
@@ -367,7 +369,7 @@ class MainActivity3 : ComponentActivity() {
 
                             }
 
-                            Row(Modifier.padding(start= 60.dp, top = 15.dp)){
+                            Row(Modifier.padding(start = 30.dp, top = 15.dp)) {
                                 Text(
                                     text = "Welcome, $personalUsernameLogIN!",
                                     fontFamily = glacialIndifference,
@@ -376,6 +378,13 @@ class MainActivity3 : ComponentActivity() {
                             }
 
                         }
+
+                        Text(
+                            text = descriptionResult
+                        )
+
+                        System.out.println(descriptionResult)
+                        ElevatedCardExample()
 
                         BottomAppBarExample(this@MainActivity3, this@MainActivity3)
 
@@ -1052,6 +1061,23 @@ fun BottomAppBarExample(onClick: MainActivity3, content: Context) {
     }
 }
 
+@Composable
+fun ElevatedCardExample() {
+    ElevatedCard(
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 6.dp
+        ),
+        modifier = Modifier
+            .size(width = 240.dp, height = 100.dp)
+    ) {
+        Text(
+            text = descriptionResult,
+            modifier = Modifier
+                .padding(16.dp),
+            textAlign = TextAlign.Center,
+        )
+    }
+}
 
 
 
@@ -1081,6 +1107,13 @@ fun mainPageTextPreview() {
 fun registrationfieldInpuPreivew() {
     registrationfieldInput()
 }
+
+@Preview
+@Composable
+fun ElevatedCardExamplePreview() {
+    ElevatedCardExample()
+}
+
 
 
 
